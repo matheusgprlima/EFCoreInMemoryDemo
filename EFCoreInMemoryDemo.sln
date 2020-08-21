@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreInMemoryDemo", "EFCoreInMemoryDemo\EFCoreInMemoryDemo.csproj", "{241A068E-DBB4-4B20-9F48-6ECDC2F5FADA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreInMemoryDemo", "EFCoreInMemoryDemo\EFCoreInMemoryDemo.csproj", "{241A068E-DBB4-4B20-9F48-6ECDC2F5FADA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreInMemoryDemo.Business", "EFCoreInMemoryDemo.Business\EFCoreInMemoryDemo.Business.csproj", "{21747437-92BF-419D-9D73-83CC34BA019B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreInMemoryDemo.Business", "EFCoreInMemoryDemo.Business\EFCoreInMemoryDemo.Business.csproj", "{21747437-92BF-419D-9D73-83CC34BA019B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreInMemoryDemo.Data", "EFCoreInMemoryDemo.Data\EFCoreInMemoryDemo.Data.csproj", "{1E3D9CC5-5ABC-4AD7-BC42-74B408AC1AF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreInMemoryDemo.Data", "EFCoreInMemoryDemo.Data\EFCoreInMemoryDemo.Data.csproj", "{1E3D9CC5-5ABC-4AD7-BC42-74B408AC1AF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
