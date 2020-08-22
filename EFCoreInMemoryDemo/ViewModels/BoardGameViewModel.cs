@@ -14,6 +14,7 @@ namespace EFCoreInMemoryDemo.ViewModels
 
 		[DisplayName("Publishing Company")]
 		[Required(ErrorMessage = "O campo é obrigatório")]
+
 		public string PublishingCompany { get; set; }
 
 		[DisplayName("Min Players")]

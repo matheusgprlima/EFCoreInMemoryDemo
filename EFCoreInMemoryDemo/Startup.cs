@@ -47,7 +47,7 @@ namespace EFCoreInMemoryDemo
 			}
 			else
 			{
-				app.UseExceptionHandler("/Home/Error");
+				app.UseExceptionHandler("/BoardGames/Error");
 				app.UseHsts();
 			}
 			app.UseHttpsRedirection();
@@ -61,7 +61,7 @@ namespace EFCoreInMemoryDemo
 			{
 				endpoints.MapControllerRoute(
 					name: "default",
-					pattern: "{controller=Home}/{action=Index}/{id?}");
+					pattern: "{controller=BoardGames}/{action=Index}/{id?}");
 			});
 		}
 	}
