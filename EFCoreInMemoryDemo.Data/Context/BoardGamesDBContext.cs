@@ -8,16 +8,10 @@ namespace EFCoreInMemoryDemo.Data.Context
 		{
 
 		}
-
 		public DbSet<BoardGame> BoardGames { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-
-			modelBuilder.Entity<BoardGame>()
-				.HasIndex(p => p.Title)
-				.IsUnique();
-
 			modelBuilder.ApplyConfigurationsFromAssembly(typeof(BoardGamesDBContext).Assembly);
 
 			base.OnModelCreating(modelBuilder);

@@ -9,6 +9,7 @@ using EFCoreInMemoryDemo.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using EFCoreInMemoryDemo.Business.Interfaces;
 using EFCoreInMemoryDemo.Data.Repository;
+using AutoMapper;
 namespace EFCoreInMemoryDemo
 {
 	public class Startup
@@ -30,6 +31,8 @@ namespace EFCoreInMemoryDemo
 
 			services.AddDbContext<BoardGamesDBContext>(options =>
 			options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+			services.AddAutoMapper(typeof(Startup));
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
