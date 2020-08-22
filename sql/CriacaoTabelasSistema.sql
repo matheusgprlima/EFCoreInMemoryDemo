@@ -22,7 +22,7 @@ CREATE TABLE [BoardGames] (
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20200821195246_Initial', N'3.1.7');
+VALUES (N'20200822013552_Initial', N'3.1.7');
 
 GO
 

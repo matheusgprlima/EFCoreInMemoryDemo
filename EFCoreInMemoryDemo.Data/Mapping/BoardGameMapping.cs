@@ -16,10 +16,6 @@ namespace EFCoreInMemoryDemo.Data.Mapping
 				.HasColumnType("varchar(200)");
 
 			builder
-				.HasIndex(b => b.Title)
-				.IsUnique();
-
-			builder
 				.Property(b => b.PublishingCompany)
 				.IsRequired()
 				.HasColumnType("varchar(200)");

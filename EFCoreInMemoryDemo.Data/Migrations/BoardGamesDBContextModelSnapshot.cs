@@ -44,9 +44,6 @@ namespace EFCoreInMemoryDemo.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Title")
-                        .IsUnique();
-
                     b.ToTable("BoardGames");
                 });
 #pragma warning restore 612, 618
