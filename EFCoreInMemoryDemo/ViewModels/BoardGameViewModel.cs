@@ -8,24 +8,24 @@ namespace EFCoreInMemoryDemo.ViewModels
 		[Key]
 		public Guid Id { get; set; }
 
-		[Required(ErrorMessage = "O campo é obrigatório")]
-		[StringLength(200, ErrorMessage = "Máximo de 200 caracteres")]
+		[Required(ErrorMessage = "This Field Is Required.")]
+		[StringLength(200, ErrorMessage = "Character Limit Reached")]
 		public string Title { get; set; }
 
 		[DisplayName("Publishing Company")]
-		[Required(ErrorMessage = "O campo é obrigatório")]
+		[Required(ErrorMessage = "This Field Is Required.")]
 
 		public string PublishingCompany { get; set; }
 
 		[DisplayName("Min Players")]
-		[Required(ErrorMessage = "O campo é obrigatório")]
+		[Required(ErrorMessage = "This Field Is Required.")]
 		public int MinPlayers { get; set; }
 
 		[DisplayName("Max Players")]
-		[Required(ErrorMessage = "O campo é obrigatório")]
+		[Required(ErrorMessage = "This Field Is Required.")]
 		public int MaxPlayers { get; set; }
 
-		[Required(ErrorMessage = "O campo é obrigatório")]
+		[Required(ErrorMessage = "This Field Is Required.")]
 		public decimal Price { get; set; }
 	}
 }
