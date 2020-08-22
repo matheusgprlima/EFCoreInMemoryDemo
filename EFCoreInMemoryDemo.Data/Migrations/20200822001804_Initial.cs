@@ -22,6 +22,12 @@ namespace EFCoreInMemoryDemo.Data.Migrations
                 {
                     table.PrimaryKey("PK_BoardGames", x => x.Id);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BoardGames_Title",
+                table: "BoardGames",
+                column: "Title",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

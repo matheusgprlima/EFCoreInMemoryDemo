@@ -13,6 +13,11 @@ namespace EFCoreInMemoryDemo.Data.Context
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+
+			modelBuilder.Entity<BoardGame>()
+				.HasIndex(p => p.Title)
+				.IsUnique();
+
 			modelBuilder.ApplyConfigurationsFromAssembly(typeof(BoardGamesDBContext).Assembly);
 
 			base.OnModelCreating(modelBuilder);

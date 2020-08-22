@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using EFCoreInMemoryDemo.Data.Context;
 using Microsoft.EntityFrameworkCore;
-
+using EFCoreInMemoryDemo.Business.Interfaces;
+using EFCoreInMemoryDemo.Data.Repository;
 namespace EFCoreInMemoryDemo
 {
 	public class Startup
@@ -31,6 +32,9 @@ namespace EFCoreInMemoryDemo
 			options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+
+			services.AddScoped<DbContext>();
+			services.AddScoped<IBoardGameRepository, BoardGameRepository>();
 		}
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
