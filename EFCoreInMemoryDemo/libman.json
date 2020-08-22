@@ -4,7 +4,7 @@
   "libraries": [
     {
       "library": "font-awesome@5.14.0",
-      "destination": "wwwroot/font-awesome/",
+      "destination": "wwwroot/lib/font-awesome/",
       "files": [
         "css/all.min.css",
         "webfonts/fa-brands-400.eot",
