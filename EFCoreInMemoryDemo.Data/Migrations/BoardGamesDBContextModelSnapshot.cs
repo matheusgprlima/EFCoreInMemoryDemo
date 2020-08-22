@@ -36,13 +36,18 @@ namespace EFCoreInMemoryDemo.Data.Migrations
 
                     b.Property<string>("PublishingCompany")
                         .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200);
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Title")
+                        .IsUnique()
+                        .HasFilter("[Title] IS NOT NULL");
 
                     b.ToTable("BoardGames");
                 });

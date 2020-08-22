@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreInMemoryDemo.Data.Migrations
 {
     [DbContext(typeof(BoardGamesDBContext))]
-    [Migration("20200822013552_Initial")]
+    [Migration("20200822210424_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,13 +38,18 @@ namespace EFCoreInMemoryDemo.Data.Migrations
 
                     b.Property<string>("PublishingCompany")
                         .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200);
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Title")
+                        .IsUnique()
+                        .HasFilter("[Title] IS NOT NULL");
 
                     b.ToTable("BoardGames");
                 });
