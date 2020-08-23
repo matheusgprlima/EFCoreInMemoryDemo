@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreInMemoryDemo.Data.Migrations
 {
     [DbContext(typeof(BoardGamesDBContext))]
-    [Migration("20200822210424_Initial")]
+    [Migration("20200823043536_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
