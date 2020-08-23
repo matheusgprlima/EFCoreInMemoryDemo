@@ -84,11 +84,11 @@ namespace EFCoreInMemoryDemo.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> DeleteConfirmed(Guid id)
 		{
-			var boardGameViewModel = _mapper.Map<BoardGameViewModel>(await _boardGameRepository.ObterPorId(id));
+			var boardGame = _mapper.Map<BoardGame>(await _boardGameRepository.ObterPorId(id));
 
-			if (boardGameViewModel == null) return NotFound();
+			if (boardGame == null) return NotFound();
 
-			await _boardGameRepository.Remover(id);
+			await _boardGameRepository.Remover(boardGame);
 
 			return RedirectToAction(nameof(Index));
 		}

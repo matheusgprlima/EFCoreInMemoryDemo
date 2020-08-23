@@ -15,7 +15,7 @@ namespace EFCoreInMemoryDemo.Business.Interfaces
 
 		Task Atualizar(TEntity entity);
 
-		Task Remover(Guid Id);
+		Task Remover(TEntity entity);
 
 		Task<IEnumerable<TEntity>> Buscar(Expression<Func<TEntity, bool>> predicate);
 

@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 namespace EFCoreInMemoryDemo.Data.Repository
 {
-	public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
+	public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity
 	{
 		protected readonly BoardGamesDBContext Db;
 		protected readonly DbSet<TEntity> Dbset;
@@ -40,9 +40,9 @@ namespace EFCoreInMemoryDemo.Data.Repository
 			Dbset.Update(entity);
 			await SaveChanges();
 		}
-		public virtual async Task Remover(Guid Id)
+		public virtual async Task Remover(TEntity entity)
 		{
-			Dbset.Remove(new TEntity { Id = Id });
+			Dbset.Remove(entity);
 			await SaveChanges();
 		}
 		public async Task<int> SaveChanges()
